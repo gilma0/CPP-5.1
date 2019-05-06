@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iterator>
 
 namespace itertools{
 	class powerset{
@@ -6,7 +7,7 @@ namespace itertools{
 		powerset();
 		powerset (range a);
 		powerset (chain a);
-		iterator begin();
-		iterator end();
+		int* begin();
+		int* end();
 	};
 }

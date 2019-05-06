@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iterator>
 
 namespace itertools{
 	class zip{
@@ -7,7 +8,7 @@ namespace itertools{
 		zip(range a, string b);
 		zip(string a, range b);
 		zip(zip a, zip b);
-		iterator begin();
-		iterator end();
+		int* begin();
+		int* end();
 	};
 }

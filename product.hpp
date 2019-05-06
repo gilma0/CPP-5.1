@@ -1,11 +1,12 @@
 #include <iostream>
+#include <iterator>
 
 namespace itertools{
 	class product{
 	public:
 		product();
 		product (range a, string b);
-		iterator begin();
-		iterator end();
+		int* begin();
+		int* end();
 	};
 }

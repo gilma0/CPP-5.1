@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iterator>
 
 namespace itertools{
 
@@ -7,8 +8,8 @@ public:
 	chain();
 	chain (range a, range b);
 	chain (range a, string b);
-	begin(){return iterator;}
-	end(){return iterator;}
+	int* begin();
+	int* end();
 };
 
 }
