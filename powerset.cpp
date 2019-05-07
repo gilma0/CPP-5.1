@@ -1,4 +1,6 @@
 #include "powerset.hpp"
+#include "range.hpp"
+#include "chain.hpp"
 
 namespace itertools{
 		powerset::powerset(){

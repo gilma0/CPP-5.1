@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iterator>
+#pragma once
 
 namespace itertools{
 

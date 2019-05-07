@@ -17,6 +17,7 @@ using namespace std;
 using namespace itertools;
 
 int main() {
+    range();
 	cout << endl << endl << "Range of ints: " << endl;
 	for (int i: range(5,9))
 		cout << i;    // 5678
