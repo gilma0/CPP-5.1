@@ -17,13 +17,13 @@ using namespace std;
 using namespace itertools;
 
 int main() {
-    range();
+
 	cout << endl << endl << "Range of ints: " << endl;
 	for (int i: range(5,9))
 		cout << i;    // 5678
 	cout << endl << endl << "Range of doubles: " << endl;
 	for (double i: range(5.1,9.1))
-		cout << i << " ";    // 5.1 6.1 7.1 8.1
+		 	cout << i << " ";    // 5.1 6.1 7.1 8.1
 	cout << endl << endl << "Range of chars: " << endl;
 	for (char i: range('a','e'))
 		cout << i << " ";    // a b c d 
