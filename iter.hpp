@@ -4,14 +4,14 @@
 class myit
 {
 private:
-    int value_;
+    double value_;
 
 public:
 
-    myit(int value){// : value_(value){
+    myit(double value){// : value_(value){
     	value_=value;
     }
-    int operator*(){ return value_;}
+    double operator*(){ return value_;}
     bool operator==( myit& other){
     	return value_ == other.value_;
     }
