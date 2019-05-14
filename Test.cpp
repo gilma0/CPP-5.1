@@ -210,6 +210,42 @@ for (auto pair: product(range(0,5), range(5,7)))
 }
 
 
+//===========================================================================//Test - POWERSET//=====================================================================================
+
+ 		testcase.setname(" **Powerset->Test** ");
+ 		 int n3=0;
+
+ 	string arr9[]={"{}","{1}","{2}","{1,2}","{3}","{1,3}","{2,3}","{1,2,3}"};
+for (auto pair: powerset(range(1,4))){
+		testcase.CHECK_OUTPUT(pair,arr9[n3]);
+		n3++;
+
+}
+
+	n3=0;
+		string arr10[]={"{}","{a}","{b}","{a,b}","{x}","{a,x}","{b,x}","{a,b,x}","{y}","{a,y}","{b,y}","{a,b,y}","{x,y}","{a,x,y}","{b,x,y}","{a,b,x,y}"};
+for (auto subset: powerset(chain(range('a','c'),range('x','z'))))
+{		testcase.CHECK_OUTPUT(subset,arr10[n3]);
+		n3++;
+
+}
+
+     n3=0;
+string arr11[]={"{}","{1}","{2}","{1,2}","{2,1}"};
+for (auto pair: powerset(range(1,3))){
+		testcase.CHECK_OUTPUT(pair,arr11[n3]);
+		n3++;
+
+}
+    n3=0;
+string arr12[]={"{}","{1}"};
+for (auto pair: powerset(range(1,2))){
+		testcase.CHECK_OUTPUT(pair,arr12[n3]);
+		n3++;
+
+}
+
+
     testcase.print(cout, /*show_grade=*/false);
     grade = testcase.grade();
 	} else {
@@ -219,3 +255,4 @@ for (auto pair: product(range(0,5), range(5,7)))
 	cout << "Your grade is: "  << grade << endl;
 	return 0;
 }
+
