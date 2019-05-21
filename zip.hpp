@@ -6,10 +6,10 @@ class zip{
     R _itera2;
 public:
     zip(T start, R end) : _itera1(start), _itera2(end) {}
-    auto begin() {
+    auto begin() const{
     	return  iteratorZip<decltype(_itera1.begin()),decltype(_itera2.begin())>(_itera1.begin(), _itera2.begin());
     }
-    auto end()  {
+    auto end()  const{
         return iteratorZip<decltype(_itera1.end()),decltype(_itera2.end())>(_itera1.end(), _itera2.end());
     }
 };
