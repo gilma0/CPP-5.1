@@ -1,25 +1,17 @@
+#include <set> // for set operations
+#include <vector>
+#include <cmath>
 #include <iostream>
-#include <iterator>
-#include "iter.hpp"
-#include "chain.hpp"
-#include "range.hpp"
-#pragma once
-
+#include "iteratorPowerset.hpp"
 namespace itertools{
 template <typename T>
-	class powerset{
-	public:
-	T _start;
-		powerset(T a) : _start(a){
+class powerset{
+   public:
+    T _start;
+    powerset(T start) : _start(start) {}                                                                                                              // constructor
+    auto begin() {return iteratorPowerset<decltype(_start.begin())> (_start.begin(), _start.end());}
+        auto end()  {return iteratorPowerset<decltype(_start.begin())>(_start.end(), _start.end());}
+};                                                                                                                                                  // class
 
-		}
-		myit begin(){
-			//return myit(_start);
-			return myit(1234);
-		}
-		myit end(){
-			//return myit(_start);
-			return myit(1234);
-		}
-	};
+
 }

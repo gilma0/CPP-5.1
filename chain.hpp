@@ -1,28 +1,16 @@
-#include <iostream>
-#include <iterator>
-#include "iter.hpp"
-#include "range.hpp"
-#include <string>
-#pragma once
-using namespace std;
-
+#include "iteratorChain.hpp"
 namespace itertools{
 template <typename T, typename R>
 class chain{
-public://///
-	T _start;
-	R _end;//
-	chain (T a, R b) : _start(a), _end(b){
-
-	}
-	myit begin(){
-		//return myit(_start.begin());
-		return myit(1234);
-	}
-	myit end(){
-		//return myit(_end.end());
-		return myit(1234);
-	}
+    T _iter1;
+    R _iter2;
+	public:
+    chain(T start, R end) : _iter1(start), _iter2(end) {}
+    auto begin() {
+         return  iteratorChain<decltype(_iter1.begin()),decltype(_iter2.begin())>(_iter1.begin(), _iter2.begin());
+    }
+    auto end()  {
+         return iteratorChain<decltype(_iter1.end()),decltype(_iter2.end())>(_iter1.end(), _iter2.end());
+    }
 };
-
 }
