@@ -9,8 +9,8 @@ class powerset{
    public:
     T _start;
     powerset(T start) : _start(start) {}                                                                                                              // constructor
-    auto begin() {return iteratorPowerset<decltype(_start.begin())> (_start.begin(), _start.end());}
-        auto end()  {return iteratorPowerset<decltype(_start.begin())>(_start.end(), _start.end());}
+    auto begin() const{return iteratorPowerset<decltype(_start.begin())> (_start.begin(), _start.end());}
+        auto end()  const{return iteratorPowerset<decltype(_start.begin())>(_start.end(), _start.end());}
 };                                                                                                                                                  // class
 
 
