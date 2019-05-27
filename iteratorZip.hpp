@@ -17,8 +17,7 @@ template <typename U, typename V>
             return (_itera1 != other._itera1) && (_itera2 != other._itera2);
         }
         pair<decltype(*_itera1),decltype(*_itera2)> operator*() const{
-            return pair< decltype(*_itera1),
-                              decltype(*_itera2)> (*_itera1,*_itera2);
+            return pair< decltype(*_itera1), decltype(*_itera2)> (*_itera1,*_itera2);
         }
         iteratorZip<U,V> &operator++(){
             ++_itera1;
